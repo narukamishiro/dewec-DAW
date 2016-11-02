@@ -1,13 +1,13 @@
 function click(){
 	alert("deja");
 }
-function gps(){
-	var px=window.getElementById("posx");
-	var py=window.getElementById("posy");
-	px.innerHTML="posicion x="+window.screenX;
-	py.innerHTML="posicion Y="+window.screenY;
-	window.onload();
+function gps(event){
+	var px=document.getElementById("posx");
+	var py=document.getElementById("posy");
+	px.innerHTML="posicion x="+event.screenX;
+	py.innerHTML="posicion Y="+event.screenY;
 }
-window.getElementById("con").addEventListener("mousemove",gps);
+document.getElementById("con").addEventListener("mousemove",gps);
+window.onload;
 //window.onclick=click;
 
