@@ -2,12 +2,12 @@ function click(){
 	alert("deja");
 }
 function createtb(){
-	var cod="<table id='tb'>";
+	var cod="<table id='tb' border='1'>";
 	var n=1;
 	for(x=1;x<=100;x++){
 		cod=cod+"<tr>";
 		for(y=1;y<=100;y++){
-			cod=cod+"<td id="+n+"></td>";
+			cod=cod+"<td id="+n+" ></td>";
 			n++;
 		}
 		cod=cod+"</tr>";
@@ -22,21 +22,22 @@ function gps(event){
 	py.innerHTML="posicion Y="+event.screenY;
 }
 function pintv1(event){
-	var tb=document.getElementById("tb");
-	var celd;
-	if(event.onmousemove){
-		var p=event.target.id;
-		celd=document.getElementById(p+"");
-	}
 	if(event.shiftKey){
-		celd.style.backgroundColor='#FF0253';
+		event.style.backgroundColor='#FF0253';
 	}
 	if(event.ctrlKey){
-		celd.style.backgroundColor='#FF1061';
+		event.style.backgroundColor='#FF1061';
 	}
 }
-document.getElementById("tb").innerHTML=createtb();
-document.getElementById("tb").addEventListener(pintv1);
+	
+document.body.innerHTML=createtb();
+for(z=1;z<=100;z++){
+	for(p=1;p<=100;p++){
+		n=100*(z-1)+p;
+		document.getElementById(n).addEventListener("onmousemove",pintv1);
+	}
+}
+
 window.onload;
 //window.onclick=click;
 
