@@ -26,5 +26,16 @@ function google(){
 function enl3pf(){
 	return document.getElementsByTagName("p")[2].getElementsByTagName("a").length;
 }
-
+function addList(event){
+	var list=document.getElementById("lit");
+	var it=document.createElement("li");
+	var num=list.getElementsByTagName("li").length+1;
+	var txt="nw"+num;
+	it.id=txt;
+	list.appendChild(it);
+	document.getElementById(txt).innerHTML="item "+num;
+	
+	
+}
 //document.getElementById("resul").innerHTML="contador:"+totenl()+"<br>,pagina enlazada pelultimo enlace:"+pagenl()+"<br>enlaces a google:"+google()+"<br>enlaces en el tercer parrafo: "+ enl3pf();
+document.getElementById("btn").addEventListener("click",addList);
