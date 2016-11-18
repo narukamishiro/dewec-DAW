@@ -34,8 +34,11 @@ function addList(event){
 	it.id=txt;
 	list.appendChild(it);
 	document.getElementById(txt).innerHTML="item "+num;
-	
-	
 }
+function unploadFile(event){
+	var but=document.createElement("input");
+	but.type="button";
+}
+
 //document.getElementById("resul").innerHTML="contador:"+totenl()+"<br>,pagina enlazada pelultimo enlace:"+pagenl()+"<br>enlaces a google:"+google()+"<br>enlaces en el tercer parrafo: "+ enl3pf();
-document.getElementById("btn").addEventListener("click",addList);
+//document.getElementById("btn").addEventListener("click",addList);
