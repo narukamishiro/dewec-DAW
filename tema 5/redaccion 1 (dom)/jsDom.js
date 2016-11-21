@@ -38,7 +38,10 @@ function addList(event){
 function unploadFile(event){
 	var but=document.createElement("input");
 	but.type="button";
+	but.value="another";
+	document.body.appendChild(but);
 }
 
 //document.getElementById("resul").innerHTML="contador:"+totenl()+"<br>,pagina enlazada pelultimo enlace:"+pagenl()+"<br>enlaces a google:"+google()+"<br>enlaces en el tercer parrafo: "+ enl3pf();
 //document.getElementById("btn").addEventListener("click",addList);
+document.getElementById("btn").addEventListener("click",unploadFile);
