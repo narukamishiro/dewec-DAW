@@ -7,13 +7,15 @@ class juego(){
 	function loop(){}
 }
 class circle(tab,rad,col,velx,vel){
+	var conten;
 	var rad;
 	var col;
 	ptscol=[];
 	var x0=0;
 	var y0=0;
-	constructor(tab,rad,col){
-		
+	constructor(rad,col){
+		this.rad=rad;
+		this.col=col;
 	}
 	function draw(){}
 	function hitbox(){
@@ -31,6 +33,18 @@ class circle(tab,rad,col,velx,vel){
 	function speed(id,vx,vy){
 		this.velx=vx;
 		this.vely=vy;
+	}
+	function pos(){
+		var vx=this.velx;
+		var vy=this.vely;
+		this.x0=x0+vx;
+		this.y0=y0+vy;
+	}
+	function getPosx(){
+		return x0;
+	}
+	function getPosy(){
+		return y0;
 	}
 	function setVx(vx){
 		this.velx=vx;
@@ -54,9 +68,27 @@ class circle(tab,rad,col,velx,vel){
 			return false;
 		}
 	}
+	function ctrl(tab,x);
 }
 class playerCircle extends circle{
-	constructor(id,rd,col){}
+	var id;
+	var xA,yA;
+	constructor(tab,id,rd,col){
+		this.tab=tab;
+		this.id=id;
+		this.rad=rd;
+		this.col=col;
+		velx=0;
+		vely=0;
+		x0=0;
+		y0=0;
+		xA=0;
+		yA=0;
+	}
+	function move(x,y){
+		xA=x;
+		yA=y;
+	}
 }
 class randomCircle extends circle{
 	id="default";
