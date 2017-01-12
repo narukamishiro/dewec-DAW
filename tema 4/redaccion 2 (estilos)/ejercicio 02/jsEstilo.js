@@ -8,7 +8,7 @@ function aumfnt(){
 	list=document.getElementsByTagName("p");
 	sz=sz+2;
 	for(x=0;x<list.length;x++){
-		list[x].style.fontSize=sz+2;
+		list[x].style.fontSize=sz+1;
 	}
 	
 }
@@ -17,7 +17,7 @@ function dwnfnt(){
 		sz=dft;
 	}
 	list=document.getElementsByTagName("p");
-	sz=sz-2;
+	sz=sz-1;
 	for(x=0;x<list.length;x++){
 		list[x].style.fontSize=sz;
 	}

@@ -30,14 +30,15 @@ function pintv1(event){
 	}
 }
 	
-document.body.innerHTML=createtb();
+/*document.body.innerHTML=createtb();
 for(z=1;z<=100;z++){
 	for(p=1;p<=100;p++){
 		n=100*(z-1)+p;
 		document.getElementById(n).addEventListener("onmousemove",pintv1);
 	}
 }
-
-window.onload;
+*/
+document.getElementById("con").addEventListener("onmousemove",gps);
+//window.onload;
 //window.onclick=click;
 
