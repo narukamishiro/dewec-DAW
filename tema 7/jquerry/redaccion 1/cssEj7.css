@@ -3,6 +3,7 @@ table {
   border: 1px solid #000;
   height: 50px;
 }
-table th, table td {
+table tr, table td {
   border: 1px solid #000;
+  background-color: white;
 }
